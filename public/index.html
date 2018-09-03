@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <table class="main-table">
+        <thead class="t-header">
+            <tr class="row-header">
+                <th>Name</th>
+                <th>Artist</th>
+                <th>Rate</th>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr id="row_create">
+                <td><input id="name" type="text" placeholder="The Song" required pattern="[\w\s]*"></td>
+                <td><input id="artist" type="text" placeholder="The Artist" required pattern="[\w\s]*"></td>
+                <td><input id="rate" type="number" placeholder="Rating" min="0" max="5" step="0.1" required ></td>
+                <td><button id="btn_create">Add Song</button></td>
+                <td></td>
+            </tr>   
+        </thead>
+        <tbody id="table_body">
+            <tr>
+                <td><input value='The Metal' readonly></td>
+                <td><input value='Tenacius D' readonly></td>
+                <td><input value='3.9' readonly></td>
+                <td><button id ='btn_update'>Edit</button></td>
+                <td><button id='btn_remove'>Remove</button></td>
+            </tr>                                                    
+        </tbody>
+    </table>
+    
+
+    <script src="script.js"></script>
+    <!-- <script src="mongodb.js"></script> -->
+</body>
+<template id="temp_songs">
+    <tr id="new-row">
+        <td><input value='Default' readonly></td>
+        <td><input value='Default' readonly></td>
+        <td><input value='0' readonly></td>
+        <td><button id ='btn_update'>Edit</button></td>
+        <td><button id='btn_remove'>Remove</button></td>
+    </tr>
+</template>
+
+</html>

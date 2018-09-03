@@ -1,0 +1,73 @@
+*{
+    font-size: 1rem;
+}
+
+body{
+    background-color: rgba(212, 212, 212, 0.808);
+}
+
+.main-table{
+    border: 6px solid white;
+    box-shadow: 10px 10px 8px #888888;
+    /* border-collapse: collapse; */
+    border-spacing: 0px;
+    margin: 20px;
+    background-color: white;
+    border-radius: 6px;
+}
+
+.row-header{background-color: pink;}
+.row-header th:hover{
+    background-color: rgb(9, 204, 35);
+    cursor: pointer;
+}
+
+.row-header th:first-child{border-top-left-radius: 6px;}
+.row-header td:last-child{border-top-right-radius: 6px;}
+#row_create td:first-child{border-bottom-left-radius: 6px;}
+#row_create td:last-child{border-bottom-right-radius: 6px;}
+
+.row-header th{
+padding: 5px;
+font-weight: 800;
+}
+
+#row_create{
+    background-color: rgba(204, 93, 204, 0.815);
+    border: 2px solid white;
+}
+
+.t-header th{
+    font-size: 1.1rem;
+    font-weight: 800;
+}
+
+.main-table input{
+    width: 200px;
+    text-align: center;
+    width: 200px;
+    margin:5px;
+    border-radius: 6px;
+}
+
+.main-table button{
+    cursor: pointer;
+    border-radius: 6px;
+    
+    border: 2px solid white;
+    padding: 5px;
+    margin: 10px;
+    width: 100px;
+    font-weight: 600;
+    color: white;
+}
+
+#btn_create{background-color: rgba(115, 245, 110, 0.822);}
+#btn_update{background-color: rgba(110, 169, 245, 0.822);}
+#btn_remove{background-color: rgba(245, 110, 110, 0.822);} 
+
+#btn_create:hover{background-color: rgb(115, 245, 110);}
+#btn_update:hover{background-color: rgb(110, 169, 245);}
+#btn_remove:hover{background-color: rgb(245, 110, 110);}
+
+
