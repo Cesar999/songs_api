@@ -1,3 +1,5 @@
+window.onload=getData();
+
 //GET DATA
 function getData(){
     fetch('/x', {method: 'GET'})
@@ -14,9 +16,6 @@ function getData(){
         console.log(error);
       });
   }
-
-//document.getElementById('btn_test').addEventListener('click',getData);
-window.onload=getData();
 
 function fillTable(data){
     let songs = JSON.parse(data);

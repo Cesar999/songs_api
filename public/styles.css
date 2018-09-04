@@ -1,15 +1,23 @@
+@font-face {
+    font-family: myFont;
+    src: url('ComicRelief.ttf');
+}
+
 *{
+    box-sizing: border-box;
     font-size: 1rem;
+    font-family: myFont;
 }
 
 .t-header th a{
     display: inline-block;
     width: 100%;
     height: 100%;
-    font-size: 1.1rem;
+    margin: 2px 0px;
+    font-size: 1.2rem;
     font-weight: 800;
     text-decoration: none;
-    color: black;
+    color: purple;
 }
 
 body{
@@ -26,9 +34,12 @@ body{
     border-radius: 6px;
 }
 
-.row-header{background-color: pink;}
+.row-header{
+    background-color: pink;
+}
 .row-header th:hover{
-    background-color: rgb(9, 204, 35);
+    transition: 0.4s;
+    background-color: white;
     cursor: pointer;
 }
 
@@ -67,12 +78,40 @@ font-weight: 800;
     color: white;
 }
 
-#btn_create{background-color: rgba(115, 245, 110, 0.822);}
-#btn_update{background-color: rgba(110, 169, 245, 0.822);}
-#btn_remove{background-color: rgba(245, 110, 110, 0.822);} 
+#btn_create{
+    opacity: 1; 
+    transition: 0.4s; 
+    background-color: rgba(115, 245, 110);
+}
+#btn_update{
+    opacity: 1; 
+    transition: 0.4s; 
+    background-color: rgba(110, 169, 245);
+}
+#btn_remove{
+    opacity: 1; 
+    transition: 0.4s; 
+    background-color: rgba(245, 110, 110);
+    color: white;
+} 
 
-#btn_create:hover{background-color: rgb(115, 245, 110);}
-#btn_update:hover{background-color: rgb(110, 169, 245);}
-#btn_remove:hover{background-color: rgb(245, 110, 110);}
+#btn_create:hover{
+    opacity: 1; 
+    color: rgb(115, 245, 110);;
+    background-color: white;
+    border: 2px solid rgb(115, 245, 110);;
+}
+#btn_update:hover{
+    opacity: 1; 
+    color:  rgb(110, 169, 245);
+    background-color: white;
+    border: 2px solid  rgb(110, 169, 245);
+}
+#btn_remove:hover{
+    opacity: 1; 
+    color: rgba(245, 110, 110);
+    background-color: white;
+    border: 2px solid rgba(245, 110, 110);
+}
 
 
