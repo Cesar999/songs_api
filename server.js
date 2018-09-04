@@ -29,6 +29,17 @@ MongoClient.connect(url,(err,client)=>{
   });
 });
 
+app.get('/x', (req, res) => {
+   db.collection('songs')
+    .find({})
+    .toArray()
+    .then((doc)=>{
+        res.send(doc);
+    },(err)=>{
+        console.log('Unable to fetch', err);
+    });
+});
+
 // serve the homepage
 app.get('/', (req, res) => {
   res.sendFile(__dirname + '/index.html');
@@ -61,17 +72,17 @@ app.delete('/delete', (req, res) => {
 
 // update a document to the DB collection recording the click event
 app.put('/update', (req, res) => {
-  const song = {
-    name: req.body.name,
-    artist: req.body.artist,
-    rate: req.body.rate,
+  const new_song = {
+    name: req.body.new_name,
+    artist: req.body.new_artist,
+    rate: req.body.new_rate,
   }
-  const song1 = {
-    name1: req.body.name1,
-    artist1: req.body.artist1,
-    rate1: req.body.rate1,
+  const old_song = {
+    name: req.body.old_name,
+    artist: req.body.old_artist,
+    rate: req.body.old_rate,
   }
-  db.collection('songs').findOneAndUpdate(song1, {$set: song}, {new: true},(err, result) => {
+  db.collection('songs').findOneAndUpdate(old_song, {$set: new_song},(err, result) => {
     if (err) {
       return console.log(err);
     }
