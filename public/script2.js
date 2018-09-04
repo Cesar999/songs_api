@@ -74,12 +74,12 @@ function sortRate(){
             var x = arr[j].getElementsByTagName('input')[2].value;
             var y = arr[j+1].getElementsByTagName('input')[2].value;
             if(sort_rate){
-                if (parseInt(x) > parseInt(y)){
+                if (parseFloat(x) > parseFloat(y)){
                     arr[j].parentNode.insertBefore(arr[j+1], arr[j]);
                 }
             }
             else{
-                if (parseInt(x) < parseInt(y)){
+                if (parseFloat(x) < parseFloat(y)){
                     arr[j].parentNode.insertBefore(arr[j+1], arr[j]);
                 }     
             }
