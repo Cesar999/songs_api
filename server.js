@@ -87,7 +87,7 @@ app.put('/update', (req, res) => {
     if (err) {
       return console.log(err);
     }
-    console(new_song);
+    console.log(new_song);
     console.log('song update from db');
     res.sendStatus(201);
   });

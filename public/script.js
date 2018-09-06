@@ -92,6 +92,14 @@ document.addEventListener('click',function(e){
  document.addEventListener('click',function(e){
    
     if(e.target && e.target.id == 'btn_update'){
+
+      let toggle = document.getElementsByClassName('update_toggle');
+      Array.from(toggle).forEach(function (child) {
+        child.id = '';
+      });
+
+      e.target.id = 'btn_update';
+
         let inputArr=e.target.parentNode.parentNode.getElementsByTagName('INPUT');
         if(inputArr[0].readOnly){
             e.target.innerHTML = 'Update';
@@ -104,6 +112,10 @@ document.addEventListener('click',function(e){
             window.old_rate = inputArr[2].value;
         }
         else{
+          Array.from(toggle).forEach(function (child) {
+            child.id = 'btn_update';
+          });
+
             e.target.innerHTML= 'Edit';
             Array.from(inputArr).forEach(function (child) {
                 child.readOnly = true;
